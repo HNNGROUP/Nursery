@@ -8,11 +8,12 @@
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-    *{
+    * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: "Kanit", sans-serif;
       font-weight: 600;
@@ -28,8 +29,7 @@
 
     .download-links a {
       margin: 10px 0;
-
-      padding: 8px 18px;
+      padding: 8px 14px;
       border-radius: 5px;
       display: flex;
       align-items: center;
@@ -69,73 +69,68 @@
       text-transform: uppercase;
     }
 
-
-    /* The container <div> - needed to position the dropdown content */
     .dropdown {
       position: relative;
-     
       font-weight: 600;
 
     }
 
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-      display: none;
+    #dropdown-content {
       position: absolute;
       background-color: #f1f1f1;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
 
-    .dropdown-content a span img{
+    .dropdown-content a span img {
       width: 100px;
       padding-top: 5px;
     }
 
-    /* Links inside the dropdown */
     .dropdown-content a {
       color: black;
-      padding: 12px 16px;
+      padding: 12px px;
       text-decoration: none;
-      display: block;
       font-weight: 600;
     }
 
-    /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
       background-color: #ddd;
     }
 
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-  
-
-    .dropbtn a{
+    .dropbtn a {
       text-decoration: none;
       color: blue;
       color: #333333;
       display: flex;
       align-items: center;
-      justify-content: space-between ;
+      justify-content: space-between;
       padding: 12px 16px;
-      width:100%;
+      width: 100%;
     }
-    .dropdown-content a{
+
+    .dropdown-content a {
       text-decoration: none;
       color: blue;
-      color: #333333;
+      color: #4b4b4b;
       display: flex;
+      padding: 0;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-weight: 500;
+    }
+
+    .dropdown-content a:hover {
+      text-decoration: none;
+      color: blue;
+
     }
   </style>
 </head>
 
 <body>
   <ul class="download-links">
-    <a href="upi://pay?pa=rahulahirwardev@oksbi&pn=HNN%20Group&am=4633&cu=INR">
+    <a href="upi://pay?pa=rahulahirwardev@oksbi&pn=RAHUL%20&am=4633&cu=INR">
       <span>PAYMENT FOR <span style="color: green">NURSERY</span></span>
       <span><img src="upi logos.png" alt="" /></span></a>
     <a href="upi://pay?pa=rahulahirwardev@oksbi&pn=HNN%20Group&am=0&cu=INR">
@@ -166,20 +161,19 @@
       <span>PAYMENT FOR <span style="color: green">class 8</span></span>
       <span><img src="upi logos.png" alt="" /></span></a>
 
-
     <div class="dropdown">
-      <div class="dropbtn"><a>
-          <span>PAYMENT FOR <span style="color: green">class 9</span></span>
-          <span style="transform: rotate(90deg);">&#x276F</span></a>
-        </div>
+      <div class="dropbtn">
+        <a>
+          <span>SELECT STREEN FOR <span style="color: green">class 9</span></span>
+          <span style="transform: rotate(90deg);">&#x276F</span>
+        </a>
+      </div>
       <div class="dropdown-content">
         <a href="#"><span>ARTS</span>
           <span><img src="upi logos.png" alt="" /></span></a>
         <a href="#"><span>COMMERCIAL APPLICATION</span>
           <span><img src="upi logos.png" alt="" /></span></a>
         <a href="#"><span>HOME SCIENCE</span>
-          <span><img src="upi logos.png" alt="" /></span></a>
-        <a href="#"><span>PHYSICAL EDUCATION</span>
           <span><img src="upi logos.png" alt="" /></span></a>
         <a href="#"><span>PHYSICAL EDUCATION</span>
           <span><img src="upi logos.png" alt="" /></span></a>
@@ -189,18 +183,18 @@
     </div>
 
     <div class="dropdown">
-      <div class="dropbtn"><a>
+      <div class="dropbtn">
+        <a>
           <span>PAYMENT FOR <span style="color: green">class 10</span></span>
-          <span style="transform: rotate(90deg);">&#x276F</span></a>
-        </div>
+          <span style="transform: rotate(90deg);">&#x276F</span>
+        </a>
+      </div>
       <div class="dropdown-content">
         <a href="#"><span>ARTS</span>
           <span><img src="upi logos.png" alt="" /></span></a>
         <a href="#"><span>COMMERCIAL APPLICATION</span>
           <span><img src="upi logos.png" alt="" /></span></a>
         <a href="#"><span>HOME SCIENCE</span>
-          <span><img src="upi logos.png" alt="" /></span></a>
-        <a href="#"><span>PHYSICAL EDUCATION</span>
           <span><img src="upi logos.png" alt="" /></span></a>
         <a href="#"><span>PHYSICAL EDUCATION</span>
           <span><img src="upi logos.png" alt="" /></span></a>
@@ -215,6 +209,7 @@
       <span>PAYMENT FOR <span style="color: green">class 12</span></span>
       <span><img src="upi logos.png" alt="" /></span></a>
   </ul>
+
 </body>
 
 </html>
