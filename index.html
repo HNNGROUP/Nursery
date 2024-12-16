@@ -5,8 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NURSERY</title>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>CLASS 5</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -107,9 +106,17 @@
     }
     .hero{  
       padding: 15px;
-      box-shadow: 0 0 5px rgb(100, 100, 100);
+      box-shadow: 0 0 5px rgba(82, 198, 9, 0.704);
       background-color: #fff;
-      border-radius: 10px;
+      border-radius: 5px;
+    }
+    .download-links a p{
+      text-align: left;
+    }
+    h2{
+display: flex;
+align-items: center;
+justify-content: space-between;
     }
   </style>
 </head>
@@ -119,33 +126,50 @@
     <div class="hero">
 
       <div class="steps">
-        <h2 style="text-decoration: underline; margin-bottom: 10px;">How To Pay Steps:</h2>
+        <h2 style="text-decoration: underline; margin-bottom: 10px;">How To Pay Steps: (Nursery) <img src="upi.png" alt="" width="70px"></h2>
         <ul>
           <li>1. Click Download Button To Get QR CODE.</li>
-          <li>2. Select App for Payment and Scan QR.</li>
-          <li>3. <Strong>Important!</Strong>Take Screen Shot of Payment And Upload in Form.</li>
+          <li>2. Open UPI App for Payment.</li>
+          <li>3. <Strong style="color: red;">Important! </Strong>Take Screen Shot of Payment And Upload in Form.</li>
         </ul>
       </div>
   
       <ul class="download-links">
-        <a href="Nursery.png" download>
-          <P><span>CLASS <span style="color: #25d366">NURSERY</span></span></P><button>DOWNLOAD</button>
+
+        <a href="QR.jpeg" download="QR.jped"  onclick="handleDownload(event, 'QR.jpeg')">
+          <P><span>CLASS <span style="color: #25d366"> NURSERY</span></span></P><button>DOWNLOAD</button>
         </a>
-      </ul>
   
-      <div class="upi-apps">
-        <a href="https://paytm.com/login">
-          <p><img src="paytm.png" alt=""></p>
-        </a>
-        <a href="https://ppe.onelink.me/rPjp/2kk1w03o">
-          <p><img src="phonepe.png" alt=""></p>
-        </a>
-        <a href="https://gpay.app.goo.gl/NW44">
-          <p><img src="gpay.png" alt=""></p>
-        </a>
-      </div>
+      </ul>
+
     </div>
   </div>
+    <script>
+    function handleDownload(event, filename) {
+      event.preventDefault();
+
+      // Check if the file is already downloaded
+      const downloaded = localStorage.getItem(filename);
+
+      if (downloaded) {
+        console.log("File already downloaded. Re-downloading...");
+      } else {
+        console.log("Downloading for the first time...");
+        localStorage.setItem(filename, true);
+      }
+
+      // Trigger download
+      const link = document.createElement("a");
+      link.href = filename;
+      link.download = filename;
+      link.click();
+
+      // Close the window after 2 seconds
+      setTimeout(() => {
+        window.close();
+      }, 3000);
+    }
+  </script>
 
   
 </body>
